@@ -11,7 +11,7 @@ resource "azurerm_virtual_network" "vnet" {
 }
 
 resource "azurerm_subnet" "subnet" {
-  name                 = var.sub_network_name
+  name                 = var.subnet_name
   address_prefixes     = var.subnet_address_prefix
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.vnet.name
@@ -21,7 +21,7 @@ resource "azurerm_public_ip" "pip" {
   name                = var.public_ip_name
   location            = var.location
   resource_group_name = var.resource_group_name
-  allocation_method   = "Static"
+  allocation_method   = "Dynamic"
   sku                 = "Standard"
   domain_name_label   = "${var.dns_prefix}${random_integer.suffix.result}"
 }

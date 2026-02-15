@@ -1,3 +1,6 @@
+### I made sure that all variables are in terraform.tfvars
+### I don't need you to write "check it!" to every variable.
+
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
@@ -28,7 +31,7 @@ variable "vnet_address_prefix" {
   type        = list(string)
 }
 
-variable "sub_network_name" {
+variable "subnet_name" {
   description = "The name of the sub network"
   type        = string
 }
