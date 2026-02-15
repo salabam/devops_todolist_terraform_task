@@ -1,0 +1,17 @@
+.terraform/
+
+*.tfstate
+*.tfstate.*
+
+*.tfvars
+*.tfvars.json
+
+.terraformrc
+terraform.rc
+
+*.tfplan
+*.log
+
+.DS_Store
+
+id_rsa*
