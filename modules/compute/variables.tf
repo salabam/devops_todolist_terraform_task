@@ -35,12 +35,12 @@ variable "public_ip_id" {
 
 variable "admin_username" {
   description = "The user that will be created when the virtual machine is created"
-  type = string
+  type        = string
 }
 
 variable "ssh_public_key" {
   description = "The path to the ssh key for sign in to system"
-  type = string
+  type        = string
 }
 
 variable "install_app_sh_git_path" {
