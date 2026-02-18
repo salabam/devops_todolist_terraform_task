@@ -1,0 +1,17 @@
+name: Manual Message Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      custom_message:
+        description: 'Введіть повідомлення для цього запуску'
+        required: true
+        default: 'Стандартний запуск'
+        type: string
+
+jobs:
+  print-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Вивести повідомлення
+        run: echo "Повідомлення від користувача: ${{ github.event.inputs.custom_message }}"
