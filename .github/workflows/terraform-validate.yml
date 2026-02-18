@@ -7,6 +7,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      custom_message:
+        description: 'Введіть повідомлення для цього запуску'
+        required: true
+        default: 'Стандартний запуск'
+        type: string
 
 permissions:
   id-token: write
